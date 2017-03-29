@@ -1,0 +1,20 @@
+{{#posts}}
+    <div id="{{_id}}">
+        <h2>{{title}}</h2>
+        <h3>by {{author}} at {{data}}</h3>
+        <div> {{content}}</div>
+            <button id="addComment">Add Comment</button>
+            <div id="comments">
+                <input id="nameInput" type="text" placeholder="Enter Name">
+                <textarea  name="commentInput" id="commentInput" cols="30" rows="10"></textarea>
+                <input type="hidden" value="_id" id="hidden">
+                <button id="commentButton">Add</button>
+            </div>
+        {{#comments}}
+        <div class="comment">
+            <div>{{content}}</div>
+            <div class="attribution">Posted by {{author}} at {{date}}</div>
+            </div>
+        {{/comments}}
+    </div>
+{{/posts}}
