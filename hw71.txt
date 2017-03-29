@@ -1,0 +1,24 @@
+1) use school
+2,3)function addStudent(firstName, lastName, address, grade) {
+    return {
+        "First Name": firstName,
+        "Last Name": lastName,
+        Address: address,
+        Grade: grade
+    };
+}Uptime: 627 school 3> db.students.insert(addStudent("Josh", "Jones", "1772 madison Ave", 8))
+WriteResult({ "nInserted" : 1 })
+Uptime: 755 school 4> db.students.insert(addStudent("Josh", "Trump", "17 madison Ave", 4))
+WriteResult({ "nInserted" : 1 })
+Uptime: 789 school 5> db.students.insert(addStudent("Donald", "Trump", "17 madison Ave", 5))
+WriteResult({ "nInserted" : 1 })
+Uptime: 828 school 6> db.students.insert(addStudent("Donald", "Trump", "17 madison Ave", 11))
+WriteResult({ "nInserted" : 1 })
+Uptime: 836 school 7> db.students.insert(addStudent("Donald", "Trump", "17 madison Ave", 1))
+WriteResult({ "nInserted" : 1 })
+4)Uptime: 1198 school 6> db.students.find({"First Name": "Donald"})
+5)Uptime: 1249 school 7> db.students.find({"First Name": "Donald", Grade: 5})
+6)use store
+7,8)Uptime: 1421 store 9> db.products.insert([{keyboard: 38},{monitor:88}])
+9)Uptime: 1524 store 10> db.products.find()
+10)Uptime: 1611 store 12> db.products.remove({})
